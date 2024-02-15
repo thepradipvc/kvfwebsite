@@ -11,6 +11,7 @@ const config = {
   prefix: "",
   theme: {
     screens: {
+      sm: "475px",
       md: "744px",
       lg: "1280px",
     },
@@ -28,6 +29,8 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        blue: "hsl(var(--blue))",
+        "dark-blue": "hsl(var(--dark-blue))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

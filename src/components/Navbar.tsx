@@ -16,15 +16,15 @@ const Navbar = () => {
           <ul className="flex gap-10">
             <li>
               <Button asChild variant="link" className="text-black">
-                <Link href="/" className="text-base">
-                  Home
+                <Link href="#about" className="text-base">
+                  About Us
                 </Link>
               </Button>
             </li>
             <li>
               <Button asChild variant="link" className="text-black">
-                <Link href="/about" className="text-base">
-                  About
+                <Link href="#contact" className="text-base">
+                  Contact Us
                 </Link>
               </Button>
             </li>
