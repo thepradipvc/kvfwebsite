@@ -281,9 +281,11 @@ export default function Home() {
         </p>
 
         <form
+          name="contact"
+          method="POST"
           // @ts-ignore eslint-disable-next-line
           netlify
-          className="mx-auto mt-6 grid max-w-3xl items-center gap-3 text-left md:grid-cols-2"
+          className="mx-auto mt-6 grid max-w-3xl gap-3 text-left md:grid-cols-2"
         >
           <div>
             <Label htmlFor="first-name">First Name</Label>
@@ -329,6 +331,9 @@ export default function Home() {
               name="message"
             />
           </div>
+          <Button className="justify-self-center md:col-span-2">
+            Send message
+          </Button>
         </form>
         <p className="mx-auto mt-8 max-w-prose text-left text-sm text-primary sm:text-center sm:text-base md:text-lg">
           Note: All donations are tax exempted under 80G of the Indian Income
