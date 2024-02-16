@@ -1,27 +1,13 @@
 import QRModal from "@/components/QRModal";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
-
-{
-  /* <QRModal>
-  <Button>
-    Donate
-    <Image
-      className="ml-2"
-      src="arrow-right.svg"
-      width={16}
-      height={16}
-      alt="arrow icon"
-    />
-  </Button>
-</QRModal>; */
-}
-
-// add about & contact ids to sections
 
 export default function Home() {
   return (
-    <main className="mb-20 mt-6 md:mt-12">
+    <main className="mt-6 md:mt-12">
       {/* Hero section */}
       <section className="bg-hands mx-auto max-w-[1280px] pb-8 text-center sm:pb-20 md:pb-28 lg:pb-44">
         <div className="wrapper">
@@ -165,14 +151,14 @@ export default function Home() {
       </section>
 
       {/* What we do section */}
-      <section className="wrapper py-4 text-center md:py-12">
+      <section className="wrapper py-8 text-center md:py-12">
         <h2 className="text-2xl font-bold text-black sm:text-4xl md:text-5xl lg:text-6xl">
-          Who are we?
+          What we do?
         </h2>
         {/* Cards wrapper */}
-        <div className="mt-4 grid justify-items-center gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid justify-items-center gap-4 md:mt-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Education card */}
-          <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md">
+          <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md md:justify-self-end">
             <div className="h-[100px] w-[100px]">
               <Image
                 src="/education.png"
@@ -188,7 +174,7 @@ export default function Home() {
             </p>
           </div>
           {/* Food card */}
-          <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md">
+          <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md md:justify-self-start">
             <div className="h-[100px] w-[100px]">
               <Image
                 src="/food.png"
@@ -204,7 +190,7 @@ export default function Home() {
             </p>
           </div>
           {/* Health care card */}
-          <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md">
+          <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md md:justify-self-end">
             <div className="h-[100px] w-[100px]">
               <Image
                 src="/health-care.png"
@@ -223,7 +209,7 @@ export default function Home() {
             </p>
           </div>
           {/* Shelter card */}
-          <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md">
+          <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md md:justify-self-start">
             <div className="h-[100px] w-[100px]">
               <Image
                 src="/shelter.png"
@@ -239,7 +225,7 @@ export default function Home() {
             </p>
           </div>
           {/* Environment card */}
-          <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md">
+          <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md md:justify-self-end">
             <div className="h-[100px] w-[100px]">
               <Image
                 src="/environment.png"
@@ -257,7 +243,7 @@ export default function Home() {
             </p>
           </div>
           {/* Women Empowerment card */}
-          <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md">
+          <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md md:justify-self-start">
             <div className="h-[100px] w-[100px]">
               <Image
                 src="/women-empowerment.png"
@@ -276,6 +262,92 @@ export default function Home() {
               women.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Us */}
+      <section
+        id="contact"
+        className="wrapper py-6 text-center md:py-8 lg:py-16"
+      >
+        <h2 className="text-2xl font-bold text-black sm:text-4xl md:text-5xl lg:text-6xl">
+          Contact Us
+        </h2>
+        <p className="mx-auto mt-6 max-w-prose text-left text-base sm:text-center sm:text-lg md:text-xl">
+          Feel free to contact us if you have any query.
+        </p>
+        <p className="mx-auto mt-2 max-w-prose text-left text-sm sm:text-center sm:text-base md:text-lg">
+          We are always here to help you.
+        </p>
+
+        <form
+          // @ts-ignore eslint-disable-next-line
+          netlify
+          className="mx-auto mt-6 grid max-w-3xl items-center gap-3 text-left md:grid-cols-2"
+        >
+          <div>
+            <Label htmlFor="first-name">First Name</Label>
+            <Input
+              type="text"
+              id="first-name"
+              name="first-name"
+              placeholder="Enter your first name"
+            />
+          </div>
+          <div>
+            <Label htmlFor="last-name">Last Name</Label>
+            <Input
+              type="text"
+              id="last-name"
+              name="last-name"
+              placeholder="Enter your last name"
+            />
+          </div>
+          <div>
+            <Label htmlFor="email">Email</Label>
+            <Input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div>
+            <Label htmlFor="mobile">Mobile no</Label>
+            <Input
+              type="number"
+              id="mobile"
+              name="mobile"
+              placeholder="Enter your mobile no"
+            />
+          </div>
+          <div className="md:col-span-2">
+            <Label htmlFor="message">What&apos;s your query?</Label>
+            <Textarea
+              placeholder="Write us a message..."
+              id="message"
+              name="message"
+            />
+          </div>
+        </form>
+        <p className="mx-auto mt-8 max-w-prose text-left text-sm text-primary sm:text-center sm:text-base md:text-lg">
+          Note: All donations are tax exempted under 80G of the Indian Income
+          Tax.
+        </p>
+      </section>
+
+      {/* Future of India Section */}
+      <section className="bg-dark-blue pb-8 pt-2">
+        <div className="wrapper text-center">
+          <div className="relative mx-auto h-20 w-20 md:h-36 md:w-36">
+            <Image src="/in-hand.svg" fill alt="In-hand icon" />
+          </div>
+          <h2 className="text-2xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">
+            The future of India <br /> in your hands
+          </h2>
+          <QRModal>
+            <Button className="mt-6">Donate Now</Button>
+          </QRModal>
         </div>
       </section>
     </main>
