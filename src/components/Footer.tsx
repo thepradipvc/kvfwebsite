@@ -7,9 +7,9 @@ import Link from "next/link";
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="wrapper flex justify-between py-4">
-      <p>Knowledge Vally Foundation © {year}</p>
-      <div className="flex gap-4">
+    <footer className="wrapper flex flex-col items-center justify-between gap-4 py-4 sm:flex-row">
+      <p className="sm:order-0 order-1">Knowledge Vally Foundation © {year}</p>
+      <div className="flex gap-4 sm:order-2">
         <Button variant="link" size="icon" asChild>
           <Link href="/">
             <Image

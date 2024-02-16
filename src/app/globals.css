@@ -72,8 +72,73 @@
   background-position: 0 100%;
 }
 
+.spread-love::before,
+.spread-humanity::after {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background-color: hsl(var(--blue));
+  color: white;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  white-space: pre-wrap;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25;
+  z-index: -1;
+}
+
+.spread-love::before {
+  content: "Spread\A Love";
+  top: -50px;
+  left: -30px;
+}
+
+.spread-humanity::after {
+  content: "Spread\A Humanity";
+  bottom: -50px;
+  right: -40px;
+}
+
 @media screen and (min-width: 475px) {
   .bg-hands {
     background-image: url("/big-hands.png");
+  }
+  .spread-love::before,
+  .spread-humanity::after {
+    height: 180px;
+    width: 180px;
+    font-size: 1.5rem;
+  }
+  .spread-love::before {
+    top: -100px;
+    left: -60px;
+  }
+  .spread-humanity::after {
+    bottom: -100px;
+    right: -70px;
+  }
+}
+
+@media screen and (min-width: 744px) {
+  /* nothing yet */
+}
+
+@media screen and (min-width: 1280px) {
+  .spread-love::before,
+  .spread-humanity::after {
+    height: 240px;
+    width: 240px;
+    font-size: 2.5rem;
+  }
+  .spread-love::before {
+    top: -130px;
+    left: -100px;
+  }
+  .spread-humanity::after {
+    bottom: -130px;
+    right: -110px;
   }
 }
