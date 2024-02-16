@@ -1,4 +1,5 @@
 import QRModal from "@/components/QRModal";
+import SubmissionMessage from "@/components/SubmissionMessage";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -8,6 +9,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="mt-6 md:mt-12">
+      <SubmissionMessage />
       {/* Hero section */}
       <section className="bg-hands mx-auto max-w-[1280px] pb-8 text-center sm:pb-20 md:pb-28 lg:pb-44">
         <div className="wrapper">
@@ -283,8 +285,8 @@ export default function Home() {
         <form
           name="contact"
           method="POST"
-          // @ts-ignore eslint-disable-next-line
-          netlify
+          data-netlify="true"
+          action="/?submitted=true"
           className="mx-auto mt-6 grid max-w-3xl gap-3 text-left md:grid-cols-2"
         >
           <div>
