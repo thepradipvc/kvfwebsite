@@ -5,11 +5,14 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
     <main className="mt-6 md:mt-12">
-      <SubmissionMessage />
+      <Suspense>
+        <SubmissionMessage />
+      </Suspense>
       {/* Hero section */}
       <section className="bg-hands mx-auto max-w-[1280px] pb-8 text-center sm:pb-20 md:pb-28 lg:pb-44">
         <div className="wrapper">
@@ -292,6 +295,7 @@ export default function Home() {
           <div>
             <Label htmlFor="first-name">First Name</Label>
             <Input
+              required
               type="text"
               id="first-name"
               name="first-name"
@@ -299,7 +303,7 @@ export default function Home() {
             />
           </div>
           <div>
-            <Label htmlFor="last-name">Last Name</Label>
+            <Label htmlFor="last-name">Last Name (optional)</Label>
             <Input
               type="text"
               id="last-name"
@@ -310,6 +314,7 @@ export default function Home() {
           <div>
             <Label htmlFor="email">Email</Label>
             <Input
+              required
               type="email"
               id="email"
               name="email"
@@ -317,7 +322,7 @@ export default function Home() {
             />
           </div>
           <div>
-            <Label htmlFor="mobile">Mobile no</Label>
+            <Label htmlFor="mobile">Mobile no (optional)</Label>
             <Input
               type="number"
               id="mobile"
@@ -328,6 +333,7 @@ export default function Home() {
           <div className="md:col-span-2">
             <Label htmlFor="message">What&apos;s your query?</Label>
             <Textarea
+              required
               placeholder="Write us a message..."
               id="message"
               name="message"
