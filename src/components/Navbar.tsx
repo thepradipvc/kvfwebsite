@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "./ui/button";
 import QRModal from "./QRModal";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
@@ -16,16 +16,16 @@ const Navbar = () => {
           <ul className="flex gap-10">
             <li>
               <Button asChild variant="link" className="text-black">
-                <Link href="#about" scroll={false} className="text-base">
+                <a href="#about" className="text-base">
                   About Us
-                </Link>
+                </a>
               </Button>
             </li>
             <li>
               <Button asChild variant="link" className="text-black">
-                <Link href="#contact" scroll={false} className="text-base">
+                <a href="#contact" className="text-base">
                   Contact Us
-                </Link>
+                </a>
               </Button>
             </li>
           </ul>
