@@ -1,11 +1,27 @@
+import Icons from "@/components/Icons";
 import QRModal from "@/components/QRModal";
 import SubmissionMessage from "@/components/SubmissionMessage";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Donate,
+  Education,
+  Environment,
+  Food,
+  GiftBox,
+  Girl,
+  HappyKids,
+  HealthCare,
+  InHand,
+  Shelter,
+  WomenEmpowerment,
+} from "@/images";
 import Image from "next/image";
 import { Suspense } from "react";
+
+export const runtime = "edge";
 
 export default function Home() {
   return (
@@ -31,13 +47,7 @@ export default function Home() {
           <QRModal>
             <Button className="mt-4 lg:mt-8">
               Donate
-              <Image
-                className="ml-2"
-                src="arrow-right.svg"
-                width={16}
-                height={16}
-                alt="arrow icon"
-              />
+              <Icons.ArrowRight className="ml-2" />
             </Button>
           </QRModal>
         </div>
@@ -56,22 +66,17 @@ export default function Home() {
           <QRModal>
             <Button className="mt-4 sm:mt-8">
               Donate
-              <Image
-                className="ml-2"
-                src="/heart.svg"
-                width={20}
-                height={20}
-                alt="heart icon"
-              />
+              <Icons.Heart className="ml-2" />
             </Button>
           </QRModal>
         </div>
         <div className="relative min-h-80 flex-1 sm:order-2">
           <Image
             className="object-cover"
-            src="/girl.jpg"
+            src={Girl}
             fill
             alt="A girl in a uniform with a bag and a book."
+            placeholder="blur"
           />
         </div>
       </section>
@@ -81,7 +86,7 @@ export default function Home() {
         <div className="wrapper">
           <div className="text-center">
             <div className="relative mx-auto h-24 w-24 md:h-36 md:w-36">
-              <Image src="/donate.svg" fill alt="donate icon" />
+              <Image src={Donate} fill alt="donate icon" />
             </div>
             <p className="text-lg font-bold uppercase text-primary md:text-2xl lg:text-3xl">
               Every rupee matters
@@ -96,7 +101,7 @@ export default function Home() {
           <div className="relative mt-4 py-20 sm:py-36 lg:py-56">
             <div className="spread-love spread-humanity relative z-10 mx-auto h-[200px] w-[200px] sm:h-[300px] sm:w-[300px] lg:h-[400px] lg:w-[400px]">
               <Image
-                src="/happy-kids.png"
+                src={HappyKids}
                 width={1680}
                 height={1680}
                 alt="A photo of happy kids"
@@ -130,7 +135,7 @@ export default function Home() {
         <div className="wrapper flex items-center justify-between">
           <div className="flex items-center gap-4 md:gap-8">
             <div className="relative hidden sm:block sm:h-20 sm:w-20 lg:h-32 lg:w-32">
-              <Image src="/gift-box.svg" fill alt="gift box" />
+              <Image src={GiftBox} fill alt="gift box" />
             </div>
             <div>
               <h2 className="text-sm font-medium text-white sm:text-xl md:text-2xl lg:text-4xl">
@@ -142,13 +147,7 @@ export default function Home() {
             <QRModal>
               <Button>
                 Donate
-                <Image
-                  className="ml-2"
-                  src="/heart.svg"
-                  width={20}
-                  height={20}
-                  alt="heart icon"
-                />
+                <Icons.Heart className="ml-2" />
               </Button>
             </QRModal>
           </div>
@@ -166,7 +165,7 @@ export default function Home() {
           <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md md:justify-self-end">
             <div className="h-[100px] w-[100px]">
               <Image
-                src="/education.png"
+                src={Education}
                 width={400}
                 height={401}
                 alt="A girl with a book"
@@ -182,7 +181,7 @@ export default function Home() {
           <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md md:justify-self-start">
             <div className="h-[100px] w-[100px]">
               <Image
-                src="/food.png"
+                src={Food}
                 width={400}
                 height={401}
                 alt="A girl with a book"
@@ -198,7 +197,7 @@ export default function Home() {
           <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md md:justify-self-end">
             <div className="h-[100px] w-[100px]">
               <Image
-                src="/health-care.png"
+                src={HealthCare}
                 width={400}
                 height={401}
                 alt="A girl with a book"
@@ -217,7 +216,7 @@ export default function Home() {
           <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md md:justify-self-start">
             <div className="h-[100px] w-[100px]">
               <Image
-                src="/shelter.png"
+                src={Shelter}
                 width={400}
                 height={401}
                 alt="A girl with a book"
@@ -233,7 +232,7 @@ export default function Home() {
           <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md md:justify-self-end">
             <div className="h-[100px] w-[100px]">
               <Image
-                src="/environment.png"
+                src={Environment}
                 width={400}
                 height={401}
                 alt="A girl with a book"
@@ -251,7 +250,7 @@ export default function Home() {
           <div className="flex max-w-[460px] flex-col items-center rounded-xl bg-[#fafafa] px-1 py-8 shadow-md md:justify-self-start">
             <div className="h-[100px] w-[100px]">
               <Image
-                src="/women-empowerment.png"
+                src={WomenEmpowerment}
                 width={400}
                 height={401}
                 alt="A girl with a book"
@@ -353,7 +352,7 @@ export default function Home() {
       <section className="bg-dark-blue pb-8 pt-2">
         <div className="wrapper text-center">
           <div className="relative mx-auto h-20 w-20 md:h-36 md:w-36">
-            <Image src="/in-hand.svg" fill alt="In-hand icon" />
+            <Image src={InHand} fill alt="In-hand icon" />
           </div>
           <h2 className="text-2xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">
             The future of India <br /> in your hands

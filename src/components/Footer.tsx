@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import { Button } from "./ui/button";
 import Link from "next/link";
+import Icons from "./Icons";
+import { Button } from "./ui/button";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -12,22 +12,12 @@ const Footer = () => {
       <div className="flex gap-4 sm:order-2">
         <Button variant="link" size="icon" asChild>
           <Link href="/">
-            <Image
-              src="/facebook.svg"
-              width={24}
-              height={24}
-              alt="facebook icon"
-            />
+            <Icons.Facebook />
           </Link>
         </Button>
         <Button variant="link" size="icon" asChild>
           <Link href="/">
-            <Image
-              src="/instagram.svg"
-              width={24}
-              height={24}
-              alt="instagram icon"
-            />
+            <Icons.Instagram />
           </Link>
         </Button>
       </div>

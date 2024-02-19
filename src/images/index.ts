@@ -1,0 +1,14 @@
+export { default as Girl } from "./girl.jpg";
+export { default as Donate } from "./donate.svg";
+export { default as Education } from "./education.png";
+export { default as Environment } from "./environment.png";
+export { default as Food } from "./food.png";
+export { default as HealthCare } from "./health-care.png";
+export { default as Logo } from "./logo.png";
+export { default as QR } from "./qr.png";
+export { default as GiftBox } from "./gift-box.svg";
+export { default as HappyKids } from "./happy-kids.png";
+export { default as InHand } from "./in-hand.svg";
+export { default as Shelter } from "./shelter.png";
+export { default as ThankYou } from "./thank-you.webp";
+export { default as WomenEmpowerment } from "./women-empowerment.png";

@@ -1,5 +1,7 @@
+import { Logo } from "@/images";
 import Image from "next/image";
 import Link from "next/link";
+import Icons from "./Icons";
 import QRModal from "./QRModal";
 import { Button } from "./ui/button";
 
@@ -8,7 +10,7 @@ const Navbar = () => {
     <header className="mx-auto flex max-w-[1280px] items-center justify-between px-4 py-2 md:px-12 lg:px-20">
       <div className="h-16 w-16">
         <Link href="/">
-          <Image src="/logo.png" width={240} height={240} alt="Logo" />
+          <Image src={Logo} width={240} height={240} alt="Logo" />
         </Link>
       </div>
       <div className="flex gap-14">
@@ -33,13 +35,7 @@ const Navbar = () => {
         <QRModal>
           <Button>
             Donate
-            <Image
-              className="ml-2"
-              src="arrow-right.svg"
-              width={16}
-              height={16}
-              alt="arrow icon"
-            />
+            <Icons.ArrowRight className="ml-2" />
           </Button>
         </QRModal>
       </div>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
+import { ThankYou } from "@/images";
 
 const SubmissionMessage = () => {
   const searchParams = useSearchParams();
@@ -22,7 +23,7 @@ const SubmissionMessage = () => {
           <div className="grid gap-4 py-4">
             <div>
               <Image
-                src="/thank-you.webp"
+                src={ThankYou}
                 height={1567}
                 width={1463}
                 alt="QR code for payment"

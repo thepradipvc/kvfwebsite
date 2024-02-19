@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Knowledge Vally Foundation Website
 
-First, run the development server:
+This is a Marketing site for a Non-Government Organisation called Knowledge Vally Foundation.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Knowledge Vally Foundation Website](#knowledge-vally-foundation-website)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [Challenges I faced](#challenges-i-faced)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Screenshots](#screenshots)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Overview
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### The challenge
 
-## Learn More
+Users should be able to:
 
-To learn more about Next.js, take a look at the following resources:
+- Visit the website and get to know about the organisation
+- Donate money by scanning the QR code
+- Contact the org members by filling out the form on website
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Solution URL: [GitHub](https://github.com/ChaudharyPradip/kvfwebsite)
+- Live Site URL: [Knowledge Vally Foundation](https://kvfgov.com)
 
-## Deploy on Vercel
+## My process
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Built with
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js](https://nextjs.org/) - The React framework for the web
+- [Tailwind](https://tailwindcss.com/) - CSS framework
+- [Shadcn UI](https://ui.shadcn.com/) - UI framework for react
+- [Netlify Forms](https://www.netlify.com/platform/core/forms/) - For handling form submissions on website
+- [Figma](https://www.figma.com/) - For designing the website UI
+- Mobile-first workflow
+- Semantic HTML5 markup
+- Flexbox
+- Grid
+
+### Challenges I faced
+
+- How to handle call-back from form submission using Netlify Forms
+  I used client component to conditionally render if it's netlify call-back
+
+### Useful resources
+
+- [Next.js Docs](https://nextjs.org/docs) - These helped me in understanding some of the powerful features that Next.js offers like Image optimisation and many more.
+- [Tailwind CSS Docs](https://tailwindcss.com/docs/) - It is very helpful to quickly find out tailwind equivalents of CSS properties.
+
+## Author
+
+- Frontend Mentor - [@ChaudharyPradip](https://www.frontendmentor.io/profile/ChaudharyPradip)
+- Twitter - [@thePradiptalks](https://www.twitter.com/thePradiptalks)
+
+## Screenshots
+
+Desktop view of Website
+![Desktop Website](./screenshots/desktop.png)
+QR for donations
+![QR Modal](./screenshots/qr.png)
+Success message on form submission
+![QR Modal](./screenshots/form%20submission.png)
+Mobile view of website
+![Mobile Website](./screenshots/mobile.png)
