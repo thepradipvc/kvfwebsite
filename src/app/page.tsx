@@ -21,8 +21,6 @@ import {
 import Image from "next/image";
 import { Suspense } from "react";
 
-export const runtime = "edge";
-
 export default function Home() {
   return (
     <main className="mt-6 md:mt-12">
